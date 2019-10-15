@@ -1,0 +1,69 @@
+{
+  "name": "stanza",
+  "description": "Modern XMPP in the browser, with a JSON API",
+  "version": "12.3.3",
+  "author": "Lance Stout <lancestout@gmail.com>",
+  "bugs": "https://github.com/legastero/stanza.io/issues",
+  "contributors": [
+    "Philipp Hancke <fippo@andyet.net>",
+    "Steven Lloyd Watkin <lloyd@evilprofessor.co.uk>"
+  ],
+  "dependencies": {
+    "@types/async": "^3.0.1",
+    "@types/node": "^12.7.4",
+    "@types/punycode": "^2.1.0",
+    "@types/readable-stream": "^2.3.3",
+    "@types/ws": "^6.0.2",
+    "async": "^3.0.1",
+    "fetch-cookie": "^0.7.3",
+    "node-fetch": "^2.6.0",
+    "punycode": "^2.1.1",
+    "react-native-randombytes": "^3.5.3",
+    "readable-stream": "^2.3.6",
+    "sdp": "^2.10.0",
+    "tslib": "^1.9.3",
+    "ws": "^7.1.1"
+  },
+  "homepage": "https://stanzajs.org",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --stage && npm run lint && npm test"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testRegex": "test/.*\\.ts$",
+    "testMatch": null,
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
+  },
+  "keywords": [
+    "jingle",
+    "stanza",
+    "stanza.io",
+    "xmpp"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "prettier": {
+    "tabWidth": 4,
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/legastero/stanza.io.git"
+  },
+  "browser": "./browser-module.js",
+  "module": "./module.js",
+  "react-native": "./rn-module.js",
+  "sideEffects": false,
+  "typings": "./index"
+}
