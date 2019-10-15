@@ -6,8 +6,6 @@ const jxt_1 = require("../jxt");
 const nodeFetch = tslib_1.__importDefault(require("../lib/fetch"));
 const fetch_1 = require('fetch-cookie')(nodeFetch.default);
 
-console.log(nodeFetch);
-
 const Utils_1 = require("../Utils");
 async function retryRequest(url, opts, timeout, allowedRetries = 5) {
     let attempt = 0;
